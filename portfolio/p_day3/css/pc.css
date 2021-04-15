@@ -1,0 +1,241 @@
+#wrap {
+    width: 100%;
+    background-color: aquamarine;
+    overflow: hidden;
+}
+
+.container {
+    width: 1200px;
+    background-color: skyblue;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* header start */
+#header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color: seagreen;
+}
+
+/* 작은메뉴 */
+#up_menu {
+    width: 100%;
+    height: 30px;
+    background-color: sienna;
+}
+
+#login_wrap {
+    float: right;
+    padding-top: 5px;
+}
+#login_wrap > li {
+    float: left;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+/* after :: 가상의 존재 추가 tag 뒤에 추가 */
+/* before :: 가상의 존재 추가 tag 앞에 추가*/
+
+#login_wrap > ::after {
+    content: '|';
+    position: absolute;
+    left: -3px;
+}
+
+#login_wrap > li:nth-child(1)::after {
+    display: none;
+}
+
+/* 큰메뉴 */
+
+#down_menu {
+    width: 100%;
+    height: 70px;
+    background-color: steelblue;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#logo {
+    width: 144px;
+    height: 24px;
+    background-image: url(../img/img_logo.png);
+    position: relative;
+}
+#main_menu {
+    width: 850px;
+    height: 70px;
+    position: absolute;
+    right: 150px;
+    background-color: violet;
+}
+#main_menu > li {
+    width: 170px;
+    height: 70px;
+    float: left;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 900;
+    position: relative;
+}
+#main_menu > li ::after {
+    width: 0;
+    height: 5px;
+    background-color: tomato;
+    content: '';
+    /* //빈 내용 content: 적어줘야함; */
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+#main_menu > li :hover::after {
+    width: 100%;
+    /* transition-duration: 1s; */
+}
+#zoom_btn {
+    width: 90px;    
+    height: 28px;
+    background-color: yellow;
+    position: absolute;
+    right: 50px;
+}
+#zoom {
+    width: 27px;
+    height: 28px;
+    background-image: url(../img/ico-sch.png);
+    border: 0;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#ham_btn {
+    width: 27px;
+    height: 28px;
+    background-image: url(../img/ico-total.png);
+    /* border: 1px solid white; */
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/* section start! */
+#sec1 {
+    width: 100%;
+    height: auto;
+    background-color: olive;
+}
+#search_box {
+    width: 300px;
+    height: 30px;
+    background-color: palevioletred;
+}
+#search_box > input {
+    width: 270px;
+    height: 30px;
+    background-color: purple;
+    float: left;
+    border : 0;
+    outline: none;
+}
+#search_icon {
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-color: palegoldenrod;
+}
+
+/* slide 이미지 */
+#slide_box {
+    width: 100%;
+    height: 545px;
+    position:relative;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#slide1 {
+    background-image: url(../img/001.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+}
+#slide2 {
+    background-image: url(../img/002.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#slide3 {
+    background-image: url(../img/003.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#btn_wrap {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    display: flex;
+    /* flex부모에 자식 중앙정렬 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: plum;
+}
+#btn_wrap > ul {
+    /* 부모태그 사이즈를 자식태그 너비의 총 합에 맞춤 */
+    display: inline-block;
+    background-color: rebeccapurple;
+}
+
+.slide_btn {
+    width: 100px;
+    height: 10px;
+    float: left;
+    background-color: green;
+    margin-left: 10px;
+}
+.slide_btn:first-child{
+    margin-left: 0;
+}
+.btn_on {
+    background-color: hotpink;
+}
+
+/* section2 start! */
+#sec2 {
+    width: 100%;
+    height: 700px;
+    background-color: khaki;
+    position: relative;
+    margin-top: 100px;
+}
+.name{
+    font-size: 30px;
+    font-weight: 900;
+}
+#sec2_menu {
+    width: 700px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+}
+#sec2_menu > li {
+    height: 30px;
+    line-height: 30px;
+}
+.sec2_menu_on {
+    text-decoration: underline;
+}
