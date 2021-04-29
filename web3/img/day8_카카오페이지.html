@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오페이지</title>
+    <link rel="stylesheet" href="./day8_style_카카오.css">
+    <script src="./jquery_file/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var ww = $(window).width();
+            var wh = $(window).height();
+
+            $('section').css({
+                width:ww,
+                height:wh
+            });
+
+            $('#title_wrap > h1').animate({
+                top:0,
+                opacity:1
+            }, 1000);
+
+            $('#title_wrap > p').delay(1000).animate({
+                left :0,
+                opacity:1
+            },1000);
+
+            $('#title_wrap > h2').delay(2000).animate({
+                bottom:0,
+                opacity:0.3
+
+            },1000)
+
+            $('#menu_wrap').mouseenter(function(){
+                $('#mini_menu_wrap').animate({
+                    top:0,
+                    opacity:1
+                });
+            });
+
+            $('#menu_wrap').mouseleave(function(){
+                $('#mini_menu_wrap').animate({
+                    top:150,
+                    opacity:0
+                });
+            });
+
+
+
+
+
+        }); //end
+    </script>
+</head>
+
+<body>
+    <!-- <div id="wrap">
+        <header id="header">
+            <div class="menu_container">
+                <div class="logo">logo</div>
+                <ul>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+            </div>
+        </header>
+
+        <section id="sec1">
+            <div class="sec_container">
+                <h1>예제 타이틀 입니다</h1>
+                <p>예제 문단입니다. 옆에서 나오네요</p>
+
+            </div>
+        </section>
+
+    </div> -->
+
+    <div id="wrap">
+        <header>
+            <div id="logo"><a href="#">logo</a></div>
+            <div id="menu_box">
+                <ul id="menu_wrap">
+                    <li><a href="#">카카오톡</a></li>
+                    <li><a href="#">선물하기</a></li>
+                    <li><a href="#">카카오택시</a></li>
+                    <li><a href="#">카카오맵</a></li>              
+                </ul> 
+                <ul id="mini_menu_wrap">
+                    <li><a href="#">프로도</a></li>
+                    <li><a href="#">무지</a></li>
+                    <li><a href="#">어피치</a></li>
+                    <li><a href="#">콘</a></li>
+                </ul>           
+            </div>
+        </header>
+
+        <section>
+            <div id="title_wrap">
+                <h1>카카오페이증권</h1>
+                <p>플랫폼을 통한 새로운 투자문화를 만듭니다.</p>
+                <h2>KAKAOPAY<br />SPECIALITY</h2>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        a();
+        function a(){
+            document.write('선언적 함수 입니다.');
+        }
+        //선언적 함수는 먼저 호출되어도 인식됨
+
+        
+        // b();
+        var b = function(){
+            document.write('익명합수 입니다.');
+        }
+
+        document.write(b);
+
+        // 익명합수는 어쨌든 변수의 특성이 있어서 선언되고 호출 되어야 한다.
+        // 선언적 함수랑 다른 점.
+        // 변수로 호출하면 그냥 함수식이 그대로 출력된다.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

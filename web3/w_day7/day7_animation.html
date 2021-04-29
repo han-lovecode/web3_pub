@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="../jquery_file/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#box').css({
+                width:300,
+                height:300,
+                backgroundColor:'teal',
+                position:'relative'
+            });
+
+            $('#box').animate({
+                width:500,
+                height:500
+            },2000,function(){
+                $(this).animate({
+                    marginLeft:300,
+                    padding:100                
+                },2000,function(){
+                    $(this).animate({
+                        top:300,
+                        opacity:0.5
+                    },2000,function(){
+                        $(this).animate({
+                            width:300,
+                            height:300,
+                            padding:0,
+                            top:0,
+                            marginLeft:0,
+                            opacity:1
+                        },2000);
+                    });  
+                });
+            });
+
+
+
+
+        })//end
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    
+</body>
+</html>

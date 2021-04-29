@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ul, li {
+    list-style: none;    
+}
+a {
+    text-decoration: none;
+color: black;
+}
+
+header, section {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+#in_header, #container {
+    width: 1200px;
+    height: 100%;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+.title_wrap {
+    width: 100%;
+    background-color: tan;
+    position: relative;
+}
+
+.title_wrap > h2 {
+    width: 100%;
+    background-color: lightgreen;
+    font-size: 60px;
+    position: relative;
+    opacity: 0;
+}
+
+.title_wrap > p {
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    font-size: 22px;
+    margin: 30px 0;
+    position: relative;
+    opacity: 0;
+}
+
+/* 공통역역 end */
+#wrap {
+    width: 100%;
+}
+
+header {
+    height: 100px;
+    background-color: lightblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    /* 높을 수록 앞으로 나옴 */
+    padding: 25px 0;
+    box-sizing: border-box;
+    font : 20px/50px '';
+}
+#logo {
+    width: 150px;
+    height: 100%;
+    background-color: crimson;
+    float: left;
+}
+
+#menu_wrap {
+    width: 900px;
+    height: 100%;
+    background-color: palegoldenrod;
+    float: left;
+}
+.top_menu {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+.sub_menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgb(224, 161, 115);
+    font-size: 16px;
+}
+
+.sub_menu > li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+}
+
+/* header end */
+
+
+#section_1 {
+    height: 800px;
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#section_1 > .title_wrap {
+    margin-top: 250px;
+    text-align: right;
+}
+#section_1 h2 {
+    transform: translateX(-400px);
+    top : 80px
+}
+#section_1 p {
+    transform: translateX(-390px);
+    top : 80px
+}
+#section_1 h1 {
+    width: 100%;
+    background-color: beige;
+    font-size: 170px;
+    line-height: 140px;
+    transform: translateX(-150px);
+    color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: -300px;
+    opacity: 0;
+}
+
+/* section_1 end */
+
+#section_2 {
+    height: 600px;
+    background-color: lightcyan;
+}
+
+#section_2 .title_wrap {
+    transform: translateY(150px);
+    /* 부모자식이 같이 떨어지지 않는다..마진은 부모자식이 같이 떨어짐 */
+}
+#section_2 h2 {
+    top:80px;
+}
+#section_2 p {
+    top:80px;
+}
+#btn {
+    width: 160px;
+    height: 70px;
+    background-color: yellow;
+    border-radius: 35px;
+    font : 25px/70px '';
+    text-align: center;
+    top:80px;
+    opacity: 0;
+}
+
+/* section_2 end */

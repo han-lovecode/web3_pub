@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = ['apple','banana','kiwi','orange','grape'];
+        var b = ['tiger', 'lion', 'rabbit', 'snake', 'dragon'];
+        var c = Number(prompt('First number'));
+        var d = Number(prompt('Second number'));
+
+        if(c > d) {
+            document.write(a);
+        } else if(c < d) {
+            document.write(b);
+        } else if(c = d) {
+            if (c % 2 == 0) {
+                document.write('It is even','<br/>',b);
+            } else {
+                document.write('It is odd','<br/>',a);
+            }
+            
+        } else {
+            document.write('입력된 수가 없습니다.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

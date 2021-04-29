@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        display: block;
+        border: 0;
+    }
+</style>
+    <script src="../jquery_file/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //attr
+            // 태그의 속성을 추가 제거 할때 사용
+            // 각 태그에 지정되는 속성만 사용
+            // 형태(css와 동일)
+            // $(선택자).attr({
+            //     다중속성:속성값,
+            //     ....
+            // });
+
+                $('img:nth-child(1)').css({
+                    width:500,
+                    height:500
+                });
+                $('img:nth-child(2)').attr({
+                    width:500,
+                    height:500
+                });
+
+
+
+                // *removeAttr
+                // $(선택자).removeAttr(삭제 속성명);
+                // 추가 또는 기존에 있던 속성을 삭제할 때 사용
+
+                // $('img:nth-child(1)').removeAttr('src');
+                // $('img:nth-child(2)').removeAttr('src');
+
+
+
+
+
+
+
+        }); //end
+    </script>
+</head>
+<body>
+    <img src="./logo.jpg" alt="">
+    <img src="./yellowsmile.png" alt="">
+    
+</body>
+</html>

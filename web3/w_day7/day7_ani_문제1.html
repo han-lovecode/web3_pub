@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="../jquery_file/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //문제 1
+            $('#box').css({
+                position:'relative'
+            });
+
+            $('#box').css({
+                width:300,
+                height:300,
+                backgroundColor:'pink',
+                display:'absolute',
+                top:0,
+                left:0
+            }).click(function(){
+                $(this).animate({
+                    width:1000,
+                    height:1000                    
+                },3000,function(){
+                    $(this).animate({
+                        top:500,
+                        left:500
+                    },3000,function(){
+                        $(this).animate({
+                            width:300,
+                            height:300,
+                            backgroundColor:'pink',
+                            top:0,
+                            left:0
+                        },3000)
+                    });                    
+                });
+            });
+
+            // 문제2
+            $('#box').css({
+                width:300,
+                height:300,
+                backgroundColor:'tan',
+                  
+
+            });
+            $('#box').click(function(){
+                $(this).animate({
+                    marginLeft:1000, 
+                    
+                },1000,function(){
+                    $(this).css({
+                        backgroundColor:'pink'
+                    });
+                });
+            });
+
+               
+
+            
+            
+                       
+
+
+
+        })//end
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    
+</body>
+</html>

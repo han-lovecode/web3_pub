@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../w_day6/day6_style.css">
+    <script src="../jquery_file/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#menu_btn').click(function(){
+                $('#move_box').css({
+                    display:'block',
+                });
+            });
+
+            $('#close_btn').click(function(){
+                $('#move_box').css({
+                    display:'none'
+                });
+            });
+
+
+        }) // end
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="menu_btn">=</div>
+        <div id="move_box">
+            <div id="close_btn">X</div>
+        </div>    
+    </div>
+</body>
+</html>

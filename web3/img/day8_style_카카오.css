@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+    
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#wrap {
+    width: 100%;
+}
+header {
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    font: 20px/25px '';
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#logo {
+    width: 200px;
+    height: 100%;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu_wrap {
+    width: 800px;
+    height: 100%;
+    background-color: aquamarine;
+    
+}
+#menu_wrap > li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mini_menu_wrap {
+    width: 800px;
+    height: 100%;
+    background-color: plum;
+    /* jquery 효과 */
+    top: 150px;
+    opacity: 0;
+
+    
+}
+#mini_menu_wrap > li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    /* background-color: tan; */
+    background-image: url(./w_day8/kakao_wallpaper.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title_wrap {
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+}
+
+#title_wrap > h1 {
+    width: 100%;
+    background-color: lemonchiffon;
+    font-size: 70px;
+    margin-bottom: 15px;
+    position: relative;
+    /* jquery 실행되기 전의 위치 */
+    top: 150px;
+    opacity: 0;
+}
+
+#title_wrap > p {
+    width: 100%;
+    background-color: rgb(8, 245, 245);
+    font-size: 22px;
+    position: relative;
+    left: -400px;
+    opacity: 0;
+}
+
+#title_wrap > h2 {
+    width: 100%;
+    background-color: rgb(216, 148, 174);
+    font-size: 70px;
+    position: relative;
+    bottom: -200px;
+    opacity: 0;
+}

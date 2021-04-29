@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./day7_style.css">
+    <title>Animation</title>
+    <script src="../jquery_file/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            /**문제3
+            =>wrap 크기 : 600*800
+            =>header 크기 : 100% * 100
+            =>이벤트 : 메뉴버튼 클릭시 서브메뉴 부드럽게 내려오기, 
+            서브메뉴 클릭시 서브메뉴 부드럽게 사라지게 작성*/
+
+            $('#menu_btn').click(function () {
+                $('#menu_wrap').animate({
+                    height: 150
+                });
+            });
+
+            $('#menu_wrap').click(function () {
+                $(this).animate({
+                    height: 0
+                });
+            });
+        }); //end
+    </script>
+</head>
+<body>
+
+    <div id="wrap">
+
+        <header>
+
+            <div id="logo"><a href="#">logo</a></div>
+            <div id="menu_btn">=</div>
+            <div id="menu_wrap">
+                <ul class="menu">
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

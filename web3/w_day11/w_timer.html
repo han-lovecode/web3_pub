@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TImer 함수</title>
+    
+    <script src="../jquery_file/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // *타이머 함수
+            // 자동호출
+            // 브라우저를 읽어올 때 지정한 시간 이후에 한번만 실행되는 타이머함수
+            // setTimeout(() => {
+            //     내용
+            // }, 시간);
+
+            //예제
+            // var st = setTimeout(() => {
+            //     document.write('지정한 시간 이후 한번만 실행')                
+            // }, 3000);
+
+            // clearTimeout(st);
+
+
+            // *setInterval함수
+            // 브라우저를 읽어올 때 지정한 시간이후 마다 계속 실행되는 타이머 함수
+            // setInterval(() => {
+            //    내용 
+            // }, 시간);
+
+            //예제
+            // var si = setInterval(() => {
+            //    document.write('지정한 시간 이후 계속 실행') 
+            // }, 1000);
+            // clearInterval(si);
+
+            
+            $('#box').css({
+                width:300,
+                height:300,
+                backgroundColor:'teal'
+            });
+
+            var i = 0;
+
+            $('#box').click(function(){
+                if(i == 0) {
+                    $(this).css({
+                        backgroundColor:'gold'
+                    });
+                    i++;
+                } else if( i == 1) {
+                    $(this).css({
+                        backgroundColor:'teal'
+                    });
+                    i = 0;
+                }
+            });
+
+            // trigger 함수
+            // .trigger()
+            // 사용자가 마치 이벤트를 실행하는 것처럼 이벤트를 강제로 실행
+            // $('선택자').trigger('명령');
+
+            var clickBox = setInterval(() => {
+                $('#box').trigger('click');
+            }, 1000);
+            
+            setTimeout(() => {
+               clearInterval(clickBox); 
+            }, 5000);
+
+
+
+        }); //end
+
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    
+</body>
+</html>

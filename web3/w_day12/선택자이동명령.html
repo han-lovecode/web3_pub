@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자이동명령</title>
+    <style>
+        * {
+            margin:0%;
+        padding: 0;
+    }
+    #box_wrap {
+        width: 1000px;
+        height: 200px;
+        border: 10px solid black;
+        margin : 100px auto;
+    }
+    #box_wrap > li {
+        list-style: none;
+        width: 200px;
+        height: 200px;
+        float: left;
+        font: 900 100px/200px '';
+        text-align: center;
+    }
+    </style>
+    <script src="../jquery_file/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            // *선택자
+            // css에서 nth-child(순서)
+            // jQuery에서 .eq(index) index 순서값으로 선택가능
+            // index 0부터 시작
+
+            $('li:first').css({
+                backgroundColor:'teal'
+            });
+            $('li').first().css({
+                backgroundColor:'teal'
+            });
+
+            $('li:nth-child(2)').css({
+                backgroundColor:'tomato'
+            })
+
+            $('li').eq(2).css({
+                backgroundColor:'gold'
+            })
+
+            $('li:last-child').css({
+                backgroundColor:'yellowGreen'
+            })
+
+            $('li:last').css({
+                backgroundColor:'green'
+            })
+
+            $('li').last().css({
+                backgroundColor:'pink'
+            })
+
+            $('li').eq(3).css({
+                backgroundColor:'tan'
+            })
+
+            $('li > a').css({
+                color:'purple'
+            })
+
+            //자식 선택자
+            $('#box_wrap').click(function(){
+                $('#box_wrap a').css({
+                    color:'lightpink'
+                });
+                $('a',this).css({
+                    color:'red'
+                })
+            })
+            //find 선택자
+            $('#box_wrap').find('a').css({
+                color:'skyblue'
+            });
+
+            //이동명령
+
+            // 1. $(선택자1,자식).appendTo(선택자2,부모);
+            // 선택자1을 선택자 2번 안에서 뒤쪽으로 이동
+            // 2. $(선택자1).prependTo(선택자2);
+            // 선택자1을 선택자 2번 안에서 앞쪽으로 이동
+
+            $('#box_wrap').find('li').first().appendTo('#box_wrap');
+            $('#box_wrap li').last().prependTo('#box_wrap');
+
+            // 3. $(선택자1).insertBefore(선택자2)
+            // 선택자 1을 선택자 2번 밖에서 앞쪽 이동
+
+            // 4.$(선택자1).insertAfter(선택자2)
+            // 선택자 1을 선택자 2의 밖에서 뒤쪽 이동
+
+            $('li').eq(1).insertBefore('#box_wrap')
+            $('li:nth-child(3)').insertAfter('#box_wrap')
+
+
+
+
+
+
+
+
+        }); //end
+    </script>
+</head>
+<body>
+    <ul id="box_wrap">
+        <li>1</li>
+        <li>2</li>
+        <li>
+            <a href="#">3</a>
+        </li>
+        <li>4</li>
+        <li>
+            <a href="#">5</a>
+        </li>
+    </ul>
+    
+</body>
+</html>

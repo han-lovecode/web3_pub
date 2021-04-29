@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+    </style>
+    <script src="../jquery_file/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            *이벤트 명령
+            $(선택자).이벤트명(function(){
+                내용
+            });
+
+            $('.box').css({
+                width:300,
+                height:300,
+                backgroundColor:'teal'
+            })
+
+            mouseenter : 마우스가 요소 영역에 들어갈 때
+            $('.box').mouseenter(function(){
+                $('.box').css({backgroundColor:'tomato'
+                });
+            });
+
+            mouseleave : 마우스가 요소 영역을 벗어날 때
+            $('.box').mouseleave(function(){
+                $('.box').css({
+                    backgroundColor:'yellowGreen'
+                })
+
+            })
+
+            mousedown:마우스를 눌렀을 때
+            $('.box').mousedown(function(){
+                $('.box').css({
+                    backgroundColor:'yellow'
+                })
+            })
+
+            mouseup : 마우스를 클릭했다가 땠을 때
+            $('.box').mouseup(function(){
+                $('.box').css({
+                    backgroundColor:'green'
+                })
+            })
+
+
+            click : 마우스를 클릭했다가 땠을 때
+            $('.box').click(function(){
+                $('.box').css({
+                    backgroundColor:'pink'
+                })
+            })
+
+            dblclick: 마우스를 일정시간 안에 두번 눌렀다 땠을 때
+            $('.box').dblclick(function(){
+                $('.box').css({
+                    backgroundColor:'gray'
+                })
+            })
+
+            hover : mouseenter + mouseleave
+            $('.box').hover(function(){
+                $('.box').css({
+                    backgroundColor:'skyBlue'
+                })
+            })
+            css랑 달리 마우스가 올렸을 때만 색이 바뀜 내리면 그대로임, 콜백함수 필요.
+            *hover기본틀
+            $('선택자').hover(function(){
+                내용
+            }, function(){ <<--콜백함수
+                내용
+            })
+
+            $('.box').hover(function(){
+                $('.box').css({
+                    backgroundColor:'skyBlue'
+                })
+            }, function(){
+                $('.box').css({
+                    backgroundColor:'mediumslateblue'
+                })
+            })
+
+            $('.box').css({
+                width:300,
+                height:300,
+                backgroundColor:'green'
+            }).click(function(){
+                $(this).css({
+                    backgroundColor:'yellow'
+                
+                });
+            })
+
+            $('.box').hover(function(){
+                $('.box').css({
+                    backgroundColor:'purple'
+                })
+            }, )
+
+
+
+
+        }); //end
+
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

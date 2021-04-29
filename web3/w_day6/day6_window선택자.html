@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 선택자</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+   
+
+        
+    </style>
+    
+    <script src="../jquery_file/jquery-3.6.0.js"></script>
+    <!-- jquery가 읽히고 나서 그 밑에 script태그를 다시 열어서 js 작성하기 -->
+    <script>
+        
+    $(document).ready(function(){
+
+        var ww = $(window).width();
+        var wh = $(window).height();
+
+        $('.box').css({
+            width:ww,
+            height:wh,
+            backgroundColor:'tomato'
+        })
+
+        // 새로고침을 계속 해야 바뀐 변수값이 적용된다.
+
+        // 문제1
+
+        var ww = $(window).width();
+        var wh = $(window).height();
+
+        $('.out_box').css({
+            backgroundColor:'blue',
+            width:ww,
+            height:wh
+        })
+
+        $('.in_box').css({
+            backgroundColor:'yellow',
+            width:1200,
+            height:wh,
+            margin:'0 auto'
+        })
+
+    
+        
+
+
+
+
+    });   //end, 이 뒤에는 아무것도 안적을 꺼다...
+    </script>
+</head>
+<body>    
+    
+    <div class="out_box">
+        <div class="in_box"></div>
+    </div>
+    
+    
+</body>
+</html>

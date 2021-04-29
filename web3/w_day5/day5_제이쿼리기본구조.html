@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            background-color: tan;        }
+            /* jquery로 드어가는 명령어가 style보다 우선시 된다. */
+            /* 태그 자체에 스타일을 넣는 것과 동일한 효과를 가진다. */
+    </style>
+    
+    <script src="../jquery_file/jquery-3.6.0.min.js"></script>
+    <!-- jquery가 읽히고 나서 그 밑에 script태그를 다시 열어서 js 작성하기 -->
+    <script>
+        // 제이쿼리 기본틀(기본틀 밖을 벗어나면 안됨.)
+        $(document).ready(function(){
+        // 자바스크립트에서 여러 명령을 함수화시켜 만들어진 함수의 라이브러리 형태
+        // 선택자.명령();
+
+        // js파일은 네이버에서 바이러스로 인식함=>압축해서 비밀번호 걸고 들고 다녀야 함
+
+        // $(선택자).명령(형태);
+        // 1.명령 => 이벤트형태 function(){}
+        // 2.명령 => 속성형태 {}     
+        // 3.명령 => 단순 명령, 시간
+
+        // 전부 카멜표기해야 인식함, 하이플 인식 못함
+        // css 선택자는 모두 사용 가능하나 문자처리해야함 (따옴표)
+        // document, this, window는 따옴표 넣으면 안되는 선택자 (이미 만들어져 있는 선택자)
+
+        // $('태그선택자').명령();
+        // $('#아이디명').명령();
+        // $('.클래스명').명령();
+        // $('선택자:nth-child(순서)').명령();
+        // $(window).명령();
+
+        // *.css();
+        // =>스타일 속성을 활용할 수 있게 하는 명령
+        // =>형태
+        // $(선택자).css({
+        //     다중속성:속성값,
+        //     다중속성:속성값.....
+        // });
+
+
+        // $('#box').css({
+        //     width:300+'Px',
+        //     //width의 단위를 px로 알아서 인식하니까 굳이 안적어도 됨.
+        //     height:'300px',
+        //     //숫자 단위 한꺼번에 문자처리해도 됨.
+        //     backgroundColor:'tomato',
+
+        // })
+        // $('.parent').css({
+        //     width:400,
+        //     height:400,
+        //     backgroundColor:'gold',
+        //     float:'left'
+        //     // 부모자식을 떨어 주기 위해 float left값 줌
+            
+        // });
+
+        // $('.child').css({
+        //     width:300,
+        //     height:300,
+        //     backgroundColor:'crimson',
+        //     margin:'50px auto'
+            
+            
+        // });
+
+        $('div').css({
+            width:400,
+            height:400,
+            fontSize:100,
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center'       
+        });
+
+        $('div:nth-child(1)').css({
+            backgroundColor:'red'   
+        });
+
+        $('div:nth-child(2)').css({
+            backgroundColor:'green'   
+        });
+
+        $('div:nth-child(3)').css({
+            backgroundColor:'purple'   
+        });
+
+        // var 변수명 = $('크기값을 가져올 선택자').width();
+        // var 변수명 = $('크기값을 가져올 선택자').height();
+        var div_w = $('div').width();
+        var div_h = $('div').height();     
+
+        $('h1').css({
+            width:div_w + 400,
+            height:div_h * 2,
+            // 연산기호로 다른 값을 나타낼 수 있다
+            backgroundColor:'gold'
+        })
+
+
+
+
+        });   //end, 이 뒤에는 아무것도 안적을 꺼다...
+    </script>
+</head>
+<body>
+
+    <!-- <div id="box"></div> -->
+
+    <!-- 문제1 -->
+    <!-- <div class="parent">
+        <div class="child"></div>
+    </div> -->
+
+    <!-- 문제2 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <!-- 문제3 -->
+    <h1>4</h1>
+
+
+    
+</body>
+</html>
